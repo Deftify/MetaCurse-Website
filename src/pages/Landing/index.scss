@@ -1,0 +1,32 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/functions';
+
+.landing-wrapper {
+  display:        flex;
+  flex-direction: column;
+  margin:         auto;
+  max-width:      1728px;
+  overflow:       hidden;
+  width:          100%;
+
+  .mid-section {
+    background:      url('../../../public/images/web-background.png') no-repeat top center;
+    background-size: cover;
+    padding-top:     58px;
+    position:        relative;
+    top:             -1px;
+  }
+
+  .section {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .landing-wrapper {
+    .mid-section {
+      padding: 12px 0 0;
+    }
+  }
+}
