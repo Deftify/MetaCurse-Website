@@ -1,0 +1,129 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/functions';
+
+.section {
+  &__four {
+    align-items:     center;
+    animation:       backgroundDance 5s linear infinite;
+    background:      url('../../../../public/images/section-four-back.png') no-repeat top center;
+    background-size: cover;
+    display:         flex;
+    flex-direction:  column;
+    justify-content: center;
+    padding:         860px 0 40px;
+    position:        relative;
+    text-align:      center;
+
+    .coming-soon-text {
+      animation:      textOpacity 2s linear infinite;
+      color:          $meta-white;
+      font-family:    Montserrat;
+      font-size:      rem-calc(34);
+      font-weight:    300;
+      left:           100%;
+      letter-spacing: 0.58em;
+      margin-bottom:  26px;
+      position:       relative;
+      text-transform: uppercase;
+    }
+
+    .twenty-twenty-two {
+      animation: textOpacityTwo 3s infinite;
+      position:  absolute;
+    }
+  }
+}
+
+@media only screen and (max-width: 944px) {
+  .section {
+    &__four {
+      padding: 590px 0 40px;
+
+      .coming-soon-text {
+        font-size: rem-calc(18);
+      }
+
+      .twenty-twenty-two {
+        animation: textOpacityTwo 3s infinite;
+        width:     160px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 496px) {
+  .section {
+    &__four {
+      .twenty-twenty-two {
+        animation: textOpacityMobile2 3s infinite;
+        width:     160px;
+      }
+    }
+  }
+}
+
+@keyframes backgroundDance {
+  0% {
+    background-position: 40%;
+  }
+  25% {
+    background-position: 50%;
+  }
+  50% {
+    background-position: 60%;
+  }
+  75% {
+    background-position: 50%;
+  }
+  100% {
+    background-position: 40%;
+  }
+}
+
+@keyframes textOpacity {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes textOpacityTwo {
+  0% {
+    bottom: 162px;
+  }
+  50% {
+    bottom: 172px;
+  }
+  100% {
+    bottom: 162px;
+  }
+}
+
+@keyframes textOpacityMobile {
+  0% {
+    bottom: 172px;
+  }
+  50% {
+    bottom: 182px;
+  }
+  100% {
+    bottom: 172px;
+  }
+}
+
+@keyframes textOpacityMobile2 {
+  0% {
+    bottom: 162px;
+  }
+  50% {
+    bottom: 172px;
+  }
+  100% {
+    bottom: 162px;
+  }
+}
